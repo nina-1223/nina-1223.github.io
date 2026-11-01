@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星际典藏 · 荣誉榜单 - 蒲熠星</title>
+    <link rel="stylesheet" href="css/works.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+</head>
+<body>
+
+    <!-- 星空粒子背景 -->
+    <canvas id="worksStarCanvas"></canvas>
+
+    <!-- 导航栏 -->
+    <nav class="sub-nav">
+        <a href="index.html" class="back-home">
+            <span class="arrow">←</span>
+            <span>返回首页</span>
+        </a>
+        <span class="brand-name">蒲熠星</span>
+        <div class="nav-anchors">
+            <a href="#shows">星光站台</a>
+            <a href="#music">星际音轨</a>
+            <a href="#literature">林间星书</a>
+            <a href="#honors">银河勋章</a>
+        </div>
+    </nav>
+
+    <!-- ========== 1. 顶部标题区域 ========== -->
+    <section class="top-title-section">
+        <div class="title-wrapper reveal">
+            <div class="title-deco-line title-deco-left">
+                <span class="deco-star">✦</span>
+                <span class="deco-line"></span>
+            </div>
+            <div class="title-center">
+                <h1 class="main-title">代 表 作<span class="title-dot">·</span>荣 誉 榜 单</h1>
+                <p class="sub-title">W O R K S &nbsp; &amp; &nbsp; H O N O R S</p>
+            </div>
+            <div class="title-deco-line title-deco-right">
+                <span class="deco-line"></span>
+                <span class="deco-star">✦</span>
+            </div>
+        </div>
+        <div class="title-divider"></div>
+    </section>
+
+    <!-- ========== 2. 星光站台·综艺代表作 ========== -->
+    <section class="section-block reveal" id="shows">
+        <div class="section-head">
+            <div class="section-head-box">
+                <span class="head-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><polygon points="12,2 15,9 22,9 16,14 18,22 12,17 6,22 8,14 2,9 9,9"/></svg>
+                </span>
+                <span class="head-text">星光站台</span>
+                <span class="head-dot">·</span>
+                <span class="head-text">综艺代表作</span>
+            </div>
+        </div>
+        <div class="shows-pagination">
+            <button class="shows-arrow shows-prev" aria-label="上一页">&#8249;</button>
+            <div class="shows-grid" id="showsGrid">
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">天才知道 第二季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">芝麻开门</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">电影新青年（原名校花与学神）</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">一站到底</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">明星大侦探</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">密室大逃脱大神版</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">名侦探学院</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">温暖的分贝</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">青芒计划</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">疯狂的麦咭</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">一起上书房</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">文物"潮"我看</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">醒醒吧废柴</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">Godlie 第五季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">诗意中国 第三季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">京城大师赛</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">拿来吧小芒</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">哥哥的少年时代</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">YES or NO</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">CGTN Dialogue</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">甜蜜的任务</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">未来中国</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">非正式会谈第七季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">花儿与少年第四季·纳凉企划</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">超脑少年团第二季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">闪光的一平米</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">南波万的聚会</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">南波万的聚会踏青季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">南波万的聚会第二季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">南波万的聚会第三季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">院人全年无休计划：明日之战</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">怦然心动20岁第三季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">好样的国货</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">森林进化论</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">跳进地理书的旅行</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">全员加速中2023</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">全员加速中对战季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">你好星期六</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">野挺有趣</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">非来不可</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">乘着大巴看中国</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">超机智青年大会</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">可爱的旅行</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">也许你要恋爱了</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">真爱智上</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">三孩来了</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">魔方新世界</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">快乐老友记第二季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">闪光的夏天</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">战至巅峰第三季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">战至巅峰第四季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">城市风华录</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">闪耀吧！大运河</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">欢欢喜喜过大年</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">最强大脑第十二季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">最强大脑第十三季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">我们好极了歌会</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">国风超有戏·寻风季</span></div>
+            <div class="show-card"><span class="show-dot"></span><span class="show-name">主咖和Ta的朋友们</span></div>
+            </div>
+            <button class="shows-arrow shows-next" aria-label="下一页">&#8250;</button>
+        </div>
+        <div class="show-page-dots" id="showPageDots"></div>
+    </section>
+
+    <!-- ========== 3. 光影星轨·参演影视 ========== -->
+    <section class="section-block reveal" id="film">
+        <div class="section-head">
+            <div class="section-head-box">
+                <span class="head-icon head-icon-film">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="M7.5 5V3M12 5V3M16.5 5V3"/>
+                        <path d="M7.5 19v2M12 19v2M16.5 19v2"/>
+                        <path d="M7.5 9.5h9M7.5 14.5h9"/>
+                    </svg>
+                </span>
+                <span class="head-text">光影星轨</span>
+                <span class="head-dot">·</span>
+                <span class="head-text">参演影视</span>
+            </div>
+        </div>
+        <div class="film-dual">
+            <div class="film-col">
+                <h4 class="col-label">参演电视剧</h4>
+
+                <div class="film-entry">
+                    <span class="film-dot"></span>
+                    <div class="film-content">
+                        <div class="film-title-row">
+                            <span class="film-title">破茧2</span>
+                            <span class="film-date">2024-5-21</span>
+                        </div>
+                        <div class="film-meta">
+                            <span>饰演 刘晓禹</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="film-entry">
+                    <span class="film-dot"></span>
+                    <div class="film-content">
+                        <div class="film-title-row">
+                            <span class="film-title">古相思曲</span>
+                            <span class="film-date">2023-6-22</span>
+                        </div>
+                        <div class="film-meta">
+                            <span>饰演 楚同裳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="film-entry">
+                    <span class="film-dot"></span>
+                    <div class="film-content">
+                        <div class="film-title-row">
+                            <span class="film-title">我的世界写了你</span>
+                            <span class="film-date">2021-10-20</span>
+                        </div>
+                        <div class="film-meta">
+                            <span>饰演 易峰</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="film-divider"></div>
+            <div class="film-col">
+                <h4 class="col-label">参演电影</h4>
+
+                <div class="film-entry">
+                    <span class="film-dot"></span>
+                    <div class="film-content">
+                        <div class="film-title-row">
+                            <span class="film-title">极地追击</span>
+                            <span class="film-date">2021-12-31</span>
+                        </div>
+                        <div class="film-meta">
+                            <span>饰演 科研员Colin</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 4. 星际音轨·音乐作品 ========== -->
+    <section class="section-block reveal" id="music">
+        <div class="section-head">
+            <div class="section-head-box">
+                <span class="head-icon head-icon-music">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="8" cy="18" rx="3.2" ry="2.4" transform="rotate(-20 8 18)"/>
+                        <line x1="10.8" y1="17.2" x2="18" y2="3"/>
+                        <path d="M 18 3 Q 20.5 3.5 20 6" stroke-width="0.7"/>
+                    </svg>
+                </span>
+                <span class="head-text">星际音轨</span>
+                <span class="head-dot">·</span>
+                <span class="head-text">音乐作品</span>
+            </div>
+        </div>
+        <div class="music-track-rail">
+            <div class="track-rail-line">
+                <span class="rail-node n1"></span>
+                <span class="rail-node n2"></span>
+                <span class="rail-node n3"></span>
+                <span class="rail-node n4"></span>
+            </div>
+            <div class="music-list">
+                <div class="music-item">
+                    <span class="music-year">2026</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">月下签</span>
+                            <span class="music-date">2026-10-24</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2026</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">我们之间到底算什么呢</span>
+                            <span class="music-date">2026-9-19</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2026</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">香</span>
+                            <span class="music-date">2026-4-23</span>
+                        </div>
+                        <span class="music-desc">世界读书日主题曲</span>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2026</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">苏轼与怀民</span>
+                            <span class="music-date">2026-2-9</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">半点心</span>
+                            <span class="music-date">2025-12-16</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">千年泪</span>
+                            <span class="music-date">2025-10-26</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">杭州杭州</span>
+                            <span class="music-date">2025-9-27</span>
+                        </div>
+                        <span class="music-desc">《如歌的旅程》杭州推广曲</span>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">马可波罗</span>
+                            <span class="music-date">2025-9-13</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">勿忘我 THE ERASED</span>
+                            <span class="music-date">2025-8-16</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">当萨特与海德格尔干杯</span>
+                            <span class="music-date">2025-8-2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">蒲松龄</span>
+                            <span class="music-date">2025-4-20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">Shakespeare's Bruises</span>
+                            <span class="music-date">2025-4-11</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">A Way To Die</span>
+                            <span class="music-date">2025-3-16</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">The Most Poetical Topic</span>
+                            <span class="music-date">2025-3-14</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2025</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">在真实和荒诞之间起舞</span>
+                            <span class="music-date">2025-2-15</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2024</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">但你说飞翔是一场梦吗</span>
+                            <span class="music-date">2024-10-20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2024</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">萨特的杯子</span>
+                            <span class="music-date">2024-9-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2024</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">夏日离别练习</span>
+                            <span class="music-date">2024-6-25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2024</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">我已经忘记你了</span>
+                            <span class="music-date">2024-5-23</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2024</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">卓别林</span>
+                            <span class="music-date">2024-4-16</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2024</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">宇宙情歌</span>
+                            <span class="music-date">2024-4-11</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <span class="music-year">2024</span>
+                    <div class="music-info">
+                        <div class="music-title-row">
+                            <span class="music-title">宇宙信封</span>
+                            <span class="music-date">2024-3-20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 5. 林间星书·文学创作 ========== -->
+    <section class="section-block reveal" id="literature">
+        <div class="section-head">
+            <div class="section-head-box">
+                <span class="head-icon head-icon-book">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                        <path d="M4 6c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V6z"/>
+                        <line x1="12" y1="4" x2="12" y2="20"/>
+                        <line x1="8" y1="8" x2="11" y2="8" stroke-width="0.6"/>
+                        <line x1="8" y1="11" x2="11" y2="11" stroke-width="0.6"/>
+                        <line x1="13" y1="8" x2="16" y2="8" stroke-width="0.6"/>
+                        <line x1="13" y1="11" x2="16" y2="11" stroke-width="0.6"/>
+                    </svg>
+                </span>
+                <span class="head-text">林间星书</span>
+                <span class="head-dot">·</span>
+                <span class="head-text">文学创作</span>
+            </div>
+        </div>
+        <div class="book-main-card">
+            <div class="book-card-deco bellflower-left">
+                <svg viewBox="0 0 40 80" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.25">
+                    <path d="M20 80 C20 60,18 30,20 5"/>
+                    <path d="M20 20 C14 18,10 22,12 14"/><path d="M20 30 C13 28,9 32,11 24"/>
+                    <path d="M20 20 C26 18,30 22,28 14"/><path d="M20 30 C27 28,31 32,29 24"/>
+                </svg>
+            </div>
+            <div class="book-card-deco bellflower-right">
+                <svg viewBox="0 0 40 80" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.25">
+                    <path d="M20 80 C20 60,22 30,20 5"/>
+                    <path d="M20 20 C26 18,30 22,28 14"/><path d="M20 30 C27 28,31 32,29 24"/>
+                    <path d="M20 20 C14 18,10 22,12 14"/><path d="M20 30 C13 28,9 32,11 24"/>
+                </svg>
+            </div>
+            <div class="book-content">
+                <div class="book-cover">
+                    <img src="images/book/fengmian.png" alt="《有人自林中坠落》封面">
+                </div>
+                <h3 class="book-title">《有人自林中坠落》</h3>
+                <div class="book-meta">
+                    <span class="book-meta-item">作者：蒲熠星</span>
+                    <span class="book-meta-sep">|</span>
+                    <span class="book-meta-item">小说作品</span>
+                    <span class="book-meta-sep">|</span>
+                    <span class="book-meta-item">2023-8-18</span>
+                </div>
+                <p class="book-desc">该书以主角的探索与冒险为主线，用第一视角讲述了一位青年科普作家的奇幻之旅，揭示了人性的复杂和自然界的神秘，展现出作者对于人性的思考以及对社会的洞察。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 6. 银河勋章·荣誉获奖 ========== -->
+    <section class="section-block reveal" id="honors">
+        <div class="section-head">
+            <div class="section-head-box">
+                <span class="head-icon head-icon-medal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                        <circle cx="12" cy="8" r="5"/><path d="M9 12l-3 8h4l2-4 2 4h4l-3-8"/>
+                        <line x1="6" y1="4" x2="6" y2="1.5" stroke-width="0.6"/><line x1="18" y1="4" x2="18" y2="1.5" stroke-width="0.6"/>
+                    </svg>
+                </span>
+                <span class="head-text">银河勋章</span>
+                <span class="head-dot">·</span>
+                <span class="head-text">荣誉获奖</span>
+            </div>
+        </div>
+        <div class="honors-dual">
+            <div class="honors-col honors-col-left">
+                <h4 class="col-label">音乐类奖项</h4>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2025</span>
+                        <span class="honor-name">QQ音乐超级巅峰之夜 巅峰新势力唱作人</span>
+                    </div>
+                </div>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2025</span>
+                        <span class="honor-name">中国新音乐排行榜 最具影响力歌手奖</span>
+                    </div>
+                </div>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2025</span>
+                        <span class="honor-name">QQ音乐巅峰榜 年度十大艺人</span>
+                    </div>
+                </div>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2025</span>
+                        <span class="honor-name">QQ音乐超级巅峰之夜 巅峰匠心歌手</span>
+                    </div>
+                </div>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2025</span>
+                        <span class="honor-name">第33届东方风云榜 年度飞跃歌手</span>
+                    </div>
+                </div>
+            </div>
+            <div class="honors-divider"></div>
+            <div class="honors-col honors-col-right">
+                <h4 class="col-label">文学类奖项</h4>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2024</span>
+                        <span class="honor-name">央视网年度推荐图书</span>
+                    </div>
+                </div>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2024</span>
+                        <span class="honor-name">《文艺联合书单》9月榜单入选图书</span>
+                    </div>
+                </div>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2024</span>
+                        <span class="honor-name">《中国出版传媒商报》季度影响力图书</span>
+                    </div>
+                </div>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2024</span>
+                        <span class="honor-name">《中国新闻出版广电报》年度最佳文学图书</span>
+                    </div>
+                </div>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2024</span>
+                        <span class="honor-name">文轩好书正式奖</span>
+                    </div>
+                </div>
+                <div class="honor-entry">
+                    <span class="honor-dot"></span>
+                    <div class="honor-content">
+                        <span class="honor-time">2024</span>
+                        <span class="honor-name">当当影响力作家（跨界作家）</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="footer-stars">✦ ✦ <a href="images.html" class="footer-star-link" title="星光影像集">✦</a></div>
+        <p>蒲熠星 个人主页 · 自制非官方发布<br>&copy; 2026 nina珺珺</p>
+    </footer>
+
+    <script src="js/works.js"></script>
+</body>
+</html>

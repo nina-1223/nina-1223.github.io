@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星际传讯站 - 蒲熠星</title>
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+</head>
+<body>
+
+    <!-- 星空粒子背景 -->
+    <canvas id="msgStarCanvas"></canvas>
+
+    <!-- ========== 1. 二级导航栏 ========== -->
+    <nav class="sub-nav">
+        <a href="index.html" class="back-home">
+            <span class="arrow">←</span>
+            <span>返回首页</span>
+        </a>
+        <span class="brand-name">蒲熠星</span>
+        <div class="nav-anchors">
+            <a href="#guestbook">留言板</a>
+            <a href="#submit">写信台</a>
+        </div>
+    </nav>
+
+    <!-- ========== 2. 首屏 Banner · 传讯站台 ========== -->
+    <section class="hero-banner">
+        <div class="banner-bg-glow"></div>
+        <div class="radio-rings" aria-hidden="true">
+            <span class="ring r1"></span>
+            <span class="ring r2"></span>
+            <span class="ring r3"></span>
+            <span class="ring r4"></span>
+            <span class="ring-center"></span>
+        </div>
+        <div class="banner-content">
+            <div class="banner-text">
+                <p class="banner-eyebrow">S T E L L A R &nbsp; M E S S A G E &nbsp; S T A T I O N</p>
+                <h1 class="banner-name">星际传讯站</h1>
+                <p class="banner-sub">STELLAR MESSAGE STATION</p>
+                <p class="banner-slogan">
+                    宇宙的每一道电波<br>
+                    都值得被认真接收
+                </p>
+            </div>
+            <div class="banner-terminal">
+                <div class="terminal-screen">
+                    <div class="terminal-line"><span class="t-prompt">▸</span> 信号检索中 ……</div>
+                    <div class="terminal-line t-ok">▸ 星际频道已连接</div>
+                    <div class="terminal-line t-glow">▸ 留言 · 投稿 · 反馈</div>
+                    <div class="terminal-line t-dim">▸ 等待你的来信 ……</div>
+                    <span class="terminal-cursor"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 3. 功能入口 · 三种频道 ========== -->
+    <section class="channels-section">
+        <div class="section-title">
+            <h2>传 讯 频 道</h2>
+            <span class="title-line"></span>
+        </div>
+        <div class="channels-grid">
+            <button class="channel-card" data-type="guestbook" data-target="guestbook">
+                <span class="channel-icon">✉</span>
+                <h3>访客留言</h3>
+                <p>留下你的足迹与想说的话，每一句都会被认真阅读。</p>
+                <span class="channel-hint">前往留言板 →</span>
+            </button>
+            <button class="channel-card" data-type="submission" data-target="submit">
+                <span class="channel-icon">✦</span>
+                <h3>作品投稿</h3>
+                <p>投稿你的创作、故事或灵感，让它们搭上星际航班。</p>
+                <span class="channel-hint">前往写信台 →</span>
+            </button>
+            <button class="channel-card" data-type="feedback" data-target="submit">
+                <span class="channel-icon">◎</span>
+                <h3>意见反馈</h3>
+                <p>对站点有任何建议与问题，欢迎随时反馈给设计者。</p>
+                <span class="channel-hint">前往写信台 →</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ========== 4. 留言板 · 星际消息墙 ========== -->
+    <section class="guestbook-section" id="guestbook">
+        <div class="section-title">
+            <h2>访 客 留 言</h2>
+            <span class="title-line"></span>
+            <p class="section-note">来自星际旅客的传讯记录 · 按下发送键的瞬间，已被宇宙接收</p>
+        </div>
+        <div class="message-wall" id="messageWall">
+            <!-- 消息由 JS 渲染 -->
+        </div>
+    </section>
+
+    <!-- ========== 5. 写信台 · 发送给设计者 ========== -->
+    <section class="submit-section" id="submit">
+        <div class="section-title">
+            <h2>写 信 台</h2>
+            <span class="title-line"></span>
+            <p class="section-note">你的消息将自动发送至设计者收件箱</p>
+        </div>
+
+        <form class="message-form" id="messageForm" novalidate>
+            <div class="form-type-tabs" role="tablist" aria-label="消息类型">
+                <button type="button" class="form-tab active" data-type="guestbook" role="tab" aria-selected="true">访客留言</button>
+                <button type="button" class="form-tab" data-type="submission" role="tab" aria-selected="false">作品投稿</button>
+                <button type="button" class="form-tab" data-type="feedback" role="tab" aria-selected="false">意见反馈</button>
+            </div>
+            <input type="hidden" name="msgType" id="msgType" value="guestbook">
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="nickname">昵称 <span class="req">*</span></label>
+                    <input type="text" id="nickname" name="nickname" placeholder="怎么称呼你？" maxlength="20" required>
+                </div>
+                <div class="form-field">
+                    <label for="contact">联系方式 <span class="opt">选填</span></label>
+                    <input type="text" id="contact" name="contact" placeholder="邮箱 / 微信 / 其他" maxlength="60">
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="subject">标题 <span class="opt">选填</span></label>
+                <input type="text" id="subject" name="subject" placeholder="一句话概括你的来信" maxlength="50">
+            </div>
+
+            <div class="form-field">
+                <label for="content">正文 <span class="req">*</span></label>
+                <textarea id="content" name="content" rows="6" placeholder="想说的话、投稿的内容或反馈的意见……" maxlength="1000" required></textarea>
+                <span class="char-count"><span id="charCount">0</span> / 1000</span>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-send">
+                    <span class="btn-send-dot"></span>
+                    发送星际电波
+                </button>
+                <p class="form-tip">提交后电波将自动发送至设计者收件箱 · 消息同时保存在本站留言墙</p>
+            </div>
+        </form>
+    </section>
+
+    <!-- ========== 6. 页脚 ========== -->
+    <footer class="site-footer">
+        <div class="footer-stars">✦ ✦ ✦</div>
+        <p>蒲熠星 个人主页 · 自制非官方发布<br>&copy; 2026 nina珺珺 · 星际传讯站</p>
+    </footer>
+
+    <!-- ========== 管理员入口（左下角 · 站长专用） ========== -->
+    <button type="button" class="admin-entry" id="adminEntry" title="进入管理模式">
+        <span class="admin-gear">⚙</span>
+    </button>
+
+    <script src="js/message.js"></script>
+</body>
+</html>
